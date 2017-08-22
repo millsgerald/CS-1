@@ -6,7 +6,7 @@ age = int(input('Enter your age\n'))
 hours = int(input('Enter the number of practice hours\n'))
 if age < 16:
 	print ('you are to young to have a license')
-if hours < 200:
+elif hours < 200:
 	print(' you have not done enough practise hours')
 else:
 	print('Congratulations here is your license')
