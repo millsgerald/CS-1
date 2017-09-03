@@ -1,0 +1,10 @@
+#Write a program to prompt the user for hours and rate per hour to compute gross pay with a new function computepay
+def computpay():
+    try:
+        hours = int(input('How many hours have you worked this week?\n'))
+        rate = input('What is your hourly rate?\n')
+    except:
+        print ('Please enter a numeric value')
+    pay = float(hours) * float(rate)
+    print('Your Gross pay for this week is ${0:.2f}'.format (pay))
+computpay()
