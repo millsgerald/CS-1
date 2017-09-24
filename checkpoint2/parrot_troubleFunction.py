@@ -1,15 +1,18 @@
-#Given two int values, return their sum. Unless the two values are the same, then return double their sum.
+#We have a loud talking parrot. The "hour" input is the current hour time in the range 0..23. 
+#We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return True if we are in trouble
 
-def value(a,b):
-    if (a != b):
-        return a + b
+def parrot(talk,hour):
+    if (talk) and (hour <7 or hour >20):
+        return True
     else:
-        return (a+b)*2
-print('a = 1 , b = 2 --> 3: ', value(1,2))
-print('a = 3 , b = 2 --> 5: ', value(3,2))
-print('a = 2 , b = 2 --> 8: ', value(2,2))
-print('a = -1 , b = 0 --> -1: ', value(-1,0))
-print('a = 3 , b = 3 --> 12: ', value(3,3))
-print('a = 0 , b = 0 --> 0: ', value(0,0))
-print('a = 0 , b = 1 --> 1: ', value(0,1))
-print('a = 3 , b = 4 --> 7: ', value(3,4))
+        return False
+print('talk = True, hour = 6 --> True: ' , parrot(True,6))
+print('talk = True, hour = 7 --> False: ' , parrot(True,7))
+print('talk = False, hour = 6 --> False: ' , parrot(False,6))
+print('talk = True, hour = 21 --> True: ' , parrot(True,21))
+print('talk = False, hour = 21 --> False: ' , parrot(False,21))
+print('talk = False, hour = 20 --> False: ' , parrot(False,20))
+print('talk = True, hour = 23 --> True: ' , parrot(True,23))
+print('talk = False, hour = 23 --> False: ' , parrot(False,23))
+print('talk = True, hour = 20 --> False: ' , parrot(True,20))
+print('talk = False, hour = 12 --> False: ' , parrot(False,12))
