@@ -1,20 +1,15 @@
 # Write a program to accept the temperature value and to tell a person to bring heavy jacket if temperature is < 20, 
 # if temperature is between 20 and 30, bring light jacket. if temperature > 30, do not bring any jacket.
 
-def jacket():
-    temp = 0
-    while True:
-        try:
-            temp = int(input('Enter current temperature\n'))
-            if (int(temp) < 20):
-                print ('Bring a heavy jacket')
-                break
-            elif (int(temp) >=20 and (int(temp)<=30)):
-                print ('Bring a light jacket')
-                break
-            else:
-                print ('Do not bring a jacket')
-                break
-        except:
-            print('Enter a valid entry')
-jacket()
+def temp(temp):
+    if (temp < 20):
+        return 'Bring Heavy Jacket'
+    else:
+        if (temp > 29):
+            return 'Do not bring a jacket'
+        else:
+            return 'Bring a Light Jacket'
+print ('temp = 15 Bring Heavy Jacket: ', temp(15))
+print ('temp = 25 Bring Light Jacket: ', temp(25))
+print ('temp = 30 Do not Bring a Jacket: ', temp(30))
+print ('temp = -11 Bring Heavy Jacket: ', temp(-11))
