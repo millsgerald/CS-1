@@ -17,9 +17,10 @@ for line in fhand:
         #print(single_hour)
         time_dict[single_hour] = time_dict.get(single_hour,0) + 1
         tups = time_dict.items()
-tmp = list()
-for k,v in time_dict.items():
-    tmp.append((k,v))
-tmp = sorted(tmp)
+#tmp = list()
+#for k,v in time_dict.items():
+#    tmp.append((k,v))
+#tmp = sorted(tmp)
+tmp=(sorted([(k,v) for k,v in time_dict.items()]))
 for v,k in tmp[:]:
     print(v,k, end = ' ')
